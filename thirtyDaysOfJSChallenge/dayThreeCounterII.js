@@ -12,23 +12,23 @@ reset() sets the current value to init and then returns it.
  * @param {integer} init
  * @return { increment: Function, decrement: Function, reset: Function }
  */
-let createCounter = function(init) {
-    let currentValue = init
-    const counter = {
-        increment: function() {
-            currentValue += 1
-            return currentValue
-        },
-        reset: function() {
-            currentValue = init
-            return currentValue
-        },
-        decrement: function() {
-            currentValue -= 1
-            return currentValue
-        }
-    }
-    return counter
+let createCounter = function (init) {
+  let currentValue = init;
+  const counter = {
+    increment: function () {
+      currentValue += 1;
+      return currentValue;
+    },
+    reset: function () {
+      currentValue = init;
+      return currentValue;
+    },
+    decrement: function () {
+      currentValue -= 1;
+      return currentValue;
+    },
+  };
+  return counter;
 };
 
 /**

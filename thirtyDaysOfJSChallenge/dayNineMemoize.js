@@ -14,20 +14,19 @@ factorial accepts a single integer n and returns 1 if n <= 1 or factorial(n - 1)
  * @param {Function} fn
  */
 function memoize(fn) {
-    const cache = {};
-    return function(...args) {
-        const key = JSON.stringify(args);
-        if(key in cache) {
-            return cache[key]
-        }
-        const funcOutput = fn(...args);
-        cache[key] = funcOutput;
-        return funcOutput;
+  const cache = {};
+  return function (...args) {
+    const key = JSON.stringify(args);
+    if (key in cache) {
+      return cache[key];
     }
+    const funcOutput = fn(...args);
+    cache[key] = funcOutput;
+    return funcOutput;
+  };
 }
 
-
-/** 
+/**
  * let callCount = 0;
  * const memoizedFn = memoize(function (a, b) {
  *	 callCount += 1;
@@ -35,7 +34,7 @@ function memoize(fn) {
  * })
  * memoizedFn(2, 3) // 5
  * memoizedFn(2, 3) // 5
- * console.log(callCount) // 1 
+ * console.log(callCount) // 1
  */
 
 /*

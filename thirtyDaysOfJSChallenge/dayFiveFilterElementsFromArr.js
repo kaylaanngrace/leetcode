@@ -34,12 +34,12 @@ Falsey values such as 0 should be filtered out
  * @param {Function} fn
  * @return {number[]}
  */
-var filter = function(arr, fn) {
-    let newArr = [];
-    for(let i = 0; i < arr.length; i++) {
-        if (fn(arr[i], i) === true || fn(arr[i], i) != false) {
-          newArr.push(arr[i])
-        } 
+var filter = function (arr, fn) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (fn(arr[i], i) === true || fn(arr[i], i) != false) {
+      newArr.push(arr[i]);
     }
-    return newArr
+  }
+  return newArr;
 };

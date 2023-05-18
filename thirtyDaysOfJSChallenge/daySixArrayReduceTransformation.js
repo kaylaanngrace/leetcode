@@ -8,24 +8,24 @@ If the length of the array is 0, it should return init.
 Please solve it without using the built-in Array.reduce method.
 */
 
-// BRUTE FORCE 
+// BRUTE FORCE
 /**
  * @param {number[]} nums
  * @param {Function} fn
  * @param {number} init
  * @return {number}
  */
-var reduce = function(nums, fn, init) {
-    let results 
-    if (nums.length === 0) {
-        return init
-    } else {
-        for (let i = 0; i < nums.length; i++) {
-            results = fn(init, nums[i])
-            init = results
-        }
-        return results
+var reduce = function (nums, fn, init) {
+  let results;
+  if (nums.length === 0) {
+    return init;
+  } else {
+    for (let i = 0; i < nums.length; i++) {
+      results = fn(init, nums[i]);
+      init = results;
     }
+    return results;
+  }
 };
 
 // REFACTORED
@@ -36,8 +36,8 @@ var reduce = function(nums, fn, init) {
  * @param {number} init
  * @return {number}
  */
-var reduce = function(nums, fn, init) {
-    let results = init
-    nums.forEach(n => results = fn(results, n))
-    return results
+var reduce = function (nums, fn, init) {
+  let results = init;
+  nums.forEach((n) => (results = fn(results, n)));
+  return results;
 };

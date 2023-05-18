@@ -25,10 +25,10 @@ Any arguments could be passed to the function but it should still always return 
 /**
  * @return {Function}
  */
-var createHelloWorld = function() {
-    return function(...args) {
-        return 'Hello World'
-    }
+var createHelloWorld = function () {
+  return function (...args) {
+    return 'Hello World';
+  };
 };
 
 /**

@@ -36,36 +36,31 @@ n == accounts[i].length
 1 <= accounts[i][j] <= 100
 */
 
-
 // time complexity is O(n x m) because we must go through every row and accounts and for each row go through every vaule
 // space complexity is O(1)/constant because we don't create another data structure proportional in size to our input to find solution
 
 // initialize variable to 0 to keep track of largest wealth so far
 
-// iterate through each customer and accounts 
+// iterate through each customer and accounts
 
 // for each customer iterate through their banks (nested loop)
 
-
 // find each customers wealth
-
 
 // check customers wealth to max wealth.
 
 /* ----------- this is my solution unsure of the complexity ------------*/
 
-let maximumWealth = function(accounts) {
-    const wealth = accounts.reduce((higher, person) => {
-        
-        let sum = 0
-        for(i=0; i<person.length; i++) {
-            sum = sum +person[i]
-        }
-        if(sum > higher) {
-        return sum
-
-        }
-        return higher
-    },0)
-    return wealth
+let maximumWealth = function (accounts) {
+  const wealth = accounts.reduce((higher, person) => {
+    let sum = 0;
+    for (i = 0; i < person.length; i++) {
+      sum = sum + person[i];
+    }
+    if (sum > higher) {
+      return sum;
+    }
+    return higher;
+  }, 0);
+  return wealth;
 };

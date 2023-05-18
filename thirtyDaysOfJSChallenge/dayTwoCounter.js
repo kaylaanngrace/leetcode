@@ -15,21 +15,20 @@ counter() = 11 // Returns 1 more than the previous time.
 counter() = 12 // Returns 1 more than the previous time.
 */
 
-
 /**
  * @param {number} n
  * @return {Function} counter
  */
-var createCounter = function(n) {
-    let counter = 0
-    return function() {
-        let add = n + counter
-        counter++
-        return add
-    };
+var createCounter = function (n) {
+  let counter = 0;
+  return function () {
+    let add = n + counter;
+    counter++;
+    return add;
+  };
 };
 
-/** 
+/**
  * const counter = createCounter(10)
  * counter() // 10
  * counter() // 11
